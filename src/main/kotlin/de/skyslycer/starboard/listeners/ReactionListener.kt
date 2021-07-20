@@ -33,7 +33,7 @@ class ReactionListener(private val guilds: Guilds, private val language: Languag
         event.retrieveMessage().queue { message ->
             if (message.author.idLong == event.userIdLong) {
                 logger.info("Message author tried to star his own message. Removing reaction. (Message ${message.id} in channel ${message.channel.id}) [Guild:${event.guild.id}]")
-               // event.reaction.removeReaction(event.user)
+                event.reaction.removeReaction(event.user)
             }
 
             event.reaction.retrieveUsers().queue {
