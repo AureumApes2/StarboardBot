@@ -13,7 +13,7 @@ class Language {
 
     // The message when the message doesn't exist anymore
     @JsonProperty("deleted-message")
-    var deletedMessage = "Der die **Nachricht** wurde leider nicht gefunden."
+    var deletedMessage = "Der **Channel** die **Nachricht** wurde leider nicht gefunden."
 
     // The message when everything needed exists
     @JsonProperty("message-link")
